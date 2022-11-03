@@ -15,7 +15,14 @@
 // penulisan sintaks PHP
 // 1. PHP didalam HTML 
 // 2. HTML di dalam PHP
+
+//variabel  dan tipe data
+//variabel
+//tidak boleh diawali dengan angka,tapi boleh mengandung angka
+// $nama="chaerul anwar";
+// echo "halo, nama saya $nama";
 ?>
+
 
 
 <!-- contoh PHP dalam HTML -->
