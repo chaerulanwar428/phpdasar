@@ -40,10 +40,14 @@
 // $x = 1;
 // $x -= 5;
 // echo $x;
-$nama = "chaerul";
-$nama .= " ";
-$nama .= "anwar";
-echo $nama;
+// $nama = "chaerul";
+// $nama .= " ";
+// $nama .= "anwar";
+// echo $nama;
+
+//perbadingan
+// <, > , <=, >=, ==
+var_dump(1 == "1");
 ?>
 
 
