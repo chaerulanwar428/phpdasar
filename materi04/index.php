@@ -24,10 +24,16 @@
 
 // Operator
 // aritmatika
-+ - * / %
-$x =10;
-$y = 20;
-echo $x * $y;
+// + - * / %
+// $x =10;
+// $y = 20;
+// echo $x * $y;
+
+//penggabungan string / concatenation / concat
+//.
+$nama_depan = "chaerul";
+$nama_belakang= "anwar";
+echo $nama_depan . " " . $nama_belakang;
 
 
 ?>
