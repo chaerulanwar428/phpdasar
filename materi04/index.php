@@ -31,11 +31,15 @@
 
 //penggabungan string / concatenation / concat
 //.
-$nama_depan = "chaerul";
-$nama_belakang= "anwar";
-echo $nama_depan . " " . $nama_belakang;
+// $nama_depan = "chaerul";
+// $nama_belakang= "anwar";
+// echo $nama_depan . " " . $nama_belakang;
 
-
+//Assigment
+// =, += , -= , /= , %=, .=
+$x = 1;
+$x -= 5;
+echo $x;
 ?>
 
 
