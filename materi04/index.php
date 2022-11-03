@@ -37,9 +37,13 @@
 
 //Assigment
 // =, += , -= , /= , %=, .=
-$x = 1;
-$x -= 5;
-echo $x;
+// $x = 1;
+// $x -= 5;
+// echo $x;
+$nama = "chaerul";
+$nama .= " ";
+$nama .= "anwar";
+echo $nama;
 ?>
 
 
