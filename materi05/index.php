@@ -15,9 +15,27 @@
 //     $i++;
 // }
 
-$i = 10;
-do {
-    echo "Hello World! <br>";
-    $i++;
-}while($i < 5);
+// $i = 10;
+// do {
+//     echo "Hello World! <br>";
+//     $i++;
+// }while($i < 5);
+?>
+
+<?php
+
+//Pengkodisian
+//if else
+//if else if else
+//ternary
+//swicth
+
+$x = 30;
+if ( $x < 20){
+    echo "benar";
+} else if ($x == 20){
+    echo "bingo!";
+} else {
+    echo "salah";
+}
 ?>
