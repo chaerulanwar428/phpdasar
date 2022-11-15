@@ -13,5 +13,8 @@
 //membuat sendiri detik
 //mktime(0,,0,0,0,0,0)
 //jam, menit, detik, bulan, tanggal, tahun
-echo date ("l", mktime(0,0,0,2,18,1999));
+// echo date ("l", mktime(0,0,0,2,18,1999));
+
+//strtotime
+echo date("l", strtotime("18 feb 1999"));
 ?>
