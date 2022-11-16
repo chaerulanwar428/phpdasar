@@ -7,4 +7,8 @@
 //cara lama
 $hari = array("senin", "selasa" , "rabu");
 
+//cara baru
+$bulan = ["januari", "februari", "maret"];
+$arr1 = [123, "tulisan", false];
+
 ?>
