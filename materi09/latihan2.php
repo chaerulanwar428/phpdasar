@@ -1,6 +1,11 @@
 <?php
 //cek apakah tidak ada data di $_GET
-if ( !isset($_GET["nama"])){
+if ( 
+    !isset($_GET["nama"]) ||
+    !isset($_GET["nim"]) ||
+    !isset($_GET["email"]) ||
+    !isset($_GET["jurusan"]) ||
+    !isset($_GET["gambar"])){
     //reditect
     header("Location: latihan1.php");
     exit;
