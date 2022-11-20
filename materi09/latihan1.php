@@ -27,10 +27,13 @@ $mahasiswa = [
     <title>Get</title>
 </head>
 <body>
+    <h1> Daftar mahasiswa</h1>
+    <ul>
     <?php foreach ( $mahasiswa as $mhs ) : ?>
         <li>
-        <a href="latihan2.php?nama=<?= $mhs["nama"]; ?>&nim=<?= $mhs["nim"]; ?>&email=<?= $mhs["email"]; ?>&jurusan=<?= $mhs["jurusan"]; ?>&gambar<?= $mhs["gambar"]; ?>"><? $mhs["nama"]; ?> </a>
+        <a href="latihan2.php?nama=<?= $mhs["nama"]; ?>&nim=<?= $mhs["nim"]; ?>&email=<?= $mhs["email"]; ?>&jurusan=<?= $mhs["jurusan"]; ?>&gambar=<?= $mhs["gambar"]; ?>"><?= $mhs["nama"]; ?> </a>
     </li>
     <?php endforeach; ?>
+    </ul>
 </body>
 </html>
