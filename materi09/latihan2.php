@@ -1,3 +1,12 @@
+<?php
+//cek apakah tidak ada data di $_GET
+if ( !isset($_GET["nama"])){
+    //reditect
+    header("Location: latihan1.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
