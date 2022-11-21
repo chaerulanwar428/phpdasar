@@ -20,14 +20,22 @@
         <th>Email</th>
         <th>Jurusan</th>
     </tr>
+    <?php $i = 1; ?>
+    <?php foreach($mahasiswa as $row) :?>
     <tr>
-        <td>1</td>
+        <td><?= $i ?></td>
         <td>
             <a href="">ubah</a> |
             <a href="">hapus</a>
         </td>
-        <td><img src="   "></td>
+        <td><img src="img/<?= $row["gambar"]; ?>" width="50"></td>
+        <td><?= $row["nim"]; ?></td>
+        <td><?= $row["nama"]; ?></td>
+        <td><?= $row["email"]; ?></td>
+        <td><?= $row["jurusan"]; ?></td>
     </tr>
+    <?php $i++?>
+    <?php endforeach; ?>
 </table>
 </body>
 </html>
