@@ -39,9 +39,10 @@ $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
         <th>Jurusan</th>
     </tr>
 
+    <?php $i = 1; ?>
     <?php while ($row = mysqli_fetch_assoc($result)) :?>
     <tr>
-        <td>1</td>
+        <td><?= $i ?></td>
         <td>
             <a href="">ubah</a> |
             <a href="">hapus</a>
@@ -52,7 +53,9 @@ $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
         <td><?= $row["email"]; ?></td>
         <td><?= $row["jurusan"]; ?></td>
     </tr>
+    <?php $i++?>
     <?php endwhile; ?>
+  
 </table>
 </body>
 </html>
