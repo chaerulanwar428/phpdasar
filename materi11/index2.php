@@ -38,18 +38,21 @@ $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
         <th>Email</th>
         <th>Jurusan</th>
     </tr>
+
+    <?php while ($row = mysqli_fetch_assoc($result)) :?>
     <tr>
         <td>1</td>
         <td>
             <a href="">ubah</a> |
             <a href="">hapus</a>
         </td>
-        <td><img src="img/img1.jpg" width="50"></td>
-        <td>15200135</td>
-        <td>chaerul anwar</td>
-        <td>chaerulanwar428@gmail.com</td>
-        <td>ilmu komputer</td>
+        <td><img src="img/<?= $row["gambar"]; ?>" width="50"></td>
+        <td><?= $row["nim"]; ?></td>
+        <td><?= $row["nama"]; ?></td>
+        <td><?= $row["email"]; ?></td>
+        <td><?= $row["jurusan"]; ?></td>
     </tr>
+    <?php endwhile; ?>
 </table>
 </body>
 </html>
