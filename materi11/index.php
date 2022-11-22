@@ -1,6 +1,6 @@
 <?php
 require 'functions.php';
-$mahasiswa = query ("SELECT * FROM mahasiswa");
+$mahasiswa = query ("SELECT * FROM mahasiswa")
 ?>
 <!DOCTYPE html>
 <html lang="en">
