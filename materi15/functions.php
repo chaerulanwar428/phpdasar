@@ -20,7 +20,13 @@ function tambah ($data){
     $nama = htmlspecialchars($data["nama"]);
     $email = htmlspecialchars($data["email"]);
     $jurusan = htmlspecialchars($data["jurusan"]);
-    $gambar   = htmlspecialchars($data["gambar"]);
+  
+
+    //upload gambar
+    $gambar = upload();
+    if (!$gambar)[
+        return false;
+    ]
 
 
     $query = "INSERT INTO mahasiswa VALUES ('', '$nim', '$nama', '$email', '$jurusan', '$gambar')";
@@ -29,6 +35,51 @@ function tambah ($data){
     return mysqli_affected_rows($conn); 
 } 
 
+function upload(){
+
+    $namaFile = $_FILES ['gambar']['name'];
+    $ukuranFile = $_FILES['gambar']['size'];
+    $error = $_FILES['gambar']['error'];
+    $tmpName = $_FILES ['gambar']['tmp_name'];
+
+    //cek apakah tidak ada gambar yang diupload
+    if( $error === 4){
+        echo "<script>
+        alert ('pilih gambar terlebih dahulu')
+        </script>";
+        return false;
+    }
+
+    //cek apakah yang diupload adalah gambar
+    $ekstensiGambarValid = ['jpg','jpeg','png'];
+    $ekstenGambar = explode('.' $namaFile);
+    $ekstensiGambar = strtolower(end ($ekstenGambar));
+    if(in_array($ekstenGambar, $ekstensiGambarValid)){
+        echo "<script>
+        alert ('yang anda upload bukan gambar!!!')
+        </script>";
+        return false;
+    }
+
+    //cek jika ukurannya terlalu besar
+    if($ukuranFile > 1000000){
+            echo "<script>
+            alert ('ukuran gambar anda terlalu besar!!!')
+            </script>";
+            return false;
+    }
+
+    //lolosa pengecekan, gambar siap diupload
+    //generate nama gambar baru
+    $namaFileBaru = uniqid();
+    $namaFileBaru .= '.';
+    $namaFileBaru .= $ekstensiGambar;
+    
+    move_uploaded_file($tempName, 'img/' . $namaFile);
+
+    return $namaFile;
+
+}
 
 function hapus($id){
     global $conn;
