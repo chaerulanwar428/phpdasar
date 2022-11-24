@@ -24,9 +24,9 @@ function tambah ($data){
 
     //upload gambar
     $gambar = upload();
-    if (!$gambar)[
+    if (!$gambar){
         return false;
-    ]
+}
 
 
     $query = "INSERT INTO mahasiswa VALUES ('', '$nim', '$nama', '$email', '$jurusan', '$gambar')";
@@ -52,7 +52,7 @@ function upload(){
 
     //cek apakah yang diupload adalah gambar
     $ekstensiGambarValid = ['jpg','jpeg','png'];
-    $ekstenGambar = explode('.' $namaFile);
+    $ekstensiGambar = explode('.', $namaFile);
     $ekstensiGambar = strtolower(end ($ekstenGambar));
     if(in_array($ekstenGambar, $ekstensiGambarValid)){
         echo "<script>
@@ -74,8 +74,8 @@ function upload(){
     $namaFileBaru = uniqid();
     $namaFileBaru .= '.';
     $namaFileBaru .= $ekstensiGambar;
-    
-    move_uploaded_file($tempName, 'img/' . $namaFile);
+
+    move_uploaded_file($tmpName, 'img/' . $namaFile);
 
     return $namaFile;
 
