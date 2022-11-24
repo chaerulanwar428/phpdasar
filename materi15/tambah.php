@@ -32,7 +32,7 @@ if ( isset($_POST["submit"]) ){
 </head>
 <body>
     <h1>Tambah mahasiswa</h1>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
     <ul>
         <li>
             <label for="nim">NIM :</label>
