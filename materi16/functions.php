@@ -146,5 +146,13 @@ function registrasi($data){
 
         return false;
     }
+
+    //enskripsi password
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
+    //tambahkan userbaru ke database
+    mysqli_query($conn, "INSERT INTO user VALUES('', '$username', '$password')");
+
+    return mysqli_affected_rows($conn);
 }
 ?>
