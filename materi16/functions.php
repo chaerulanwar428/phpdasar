@@ -140,8 +140,15 @@ function registrasi($data){
 
     //cek username sudah ada belum
 
-    mysqli_query($conn, "SELECT username FROM user WHERE username = '$username");
-    
+    $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
+
+    if(mysqli_fetch_assoc($result)){
+        echo"<script>
+        alert('username sudah terdaftar! silahkan ganti username')
+        </script>";
+
+        return false;
+    }
     //cek konfirmasi password
 
     if( $password !== $password2 ){
