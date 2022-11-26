@@ -1,3 +1,17 @@
+<?php
+require 'functions.php';
+
+if(isset($_POST["login"])){
+
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
+
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
