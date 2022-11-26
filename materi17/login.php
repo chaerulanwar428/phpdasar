@@ -13,13 +13,13 @@ if(isset($_POST["login"])){
 
 
         //cek password
-        $row = myqli_fetch_assoc($result);
+        $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row["password"])){
             header("Location: index.php");
             exit;
         }
     }
-
+    $error = true;
 }
 
 ?>
@@ -34,6 +34,9 @@ if(isset($_POST["login"])){
 <body>
     <h1>halaman Login</h1>
 
+    <?php if (isset($error)) : ?>
+    <p style="color: red; font-style: italic;">username/password salah</p>
+    <?php endif ; ?>
     <form action="" method="post">
         <ul>
             <li>
