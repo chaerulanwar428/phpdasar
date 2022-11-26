@@ -8,6 +8,17 @@ if(isset($_POST["login"])){
 
     $result = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username'");
 
+    //cek username
+    if (mysqli_num_rows($result) === 1){
+
+
+        //cek password
+        $row = myqli_fetch_assoc($result);
+        if (password_verify($password, $row["password"])){
+            header("Location: index.php");
+            exit;
+        }
+    }
 
 }
 
