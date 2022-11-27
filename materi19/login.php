@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+//cek cookie
+if(isset($_COOKIE['login'])){
+    if ($_COOKIE['login']=='true'){
+        $_SESSION['login'] = true ;
+    }
+}
 if(isset($_SESSION["login"])){
     header("Location: index.php");
     exit;
@@ -24,6 +30,12 @@ if(isset($_POST["login"])){
 
             //set session
             $_SESSION["login"] = true;
+
+            //cek remember me
+            if(isset($_POST['remember'])){
+                //buat cookie
+                set('login','true', time() + 60); 
+            }
 
             header("Location: index.php");
             exit;
