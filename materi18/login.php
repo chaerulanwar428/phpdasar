@@ -42,7 +42,7 @@ if(isset($_POST["login"])){
     <title>Halaman Login</title>
 </head>
 <body>
-    
+    <a href="logout.php">Logout!</a>
     <h1>halaman Login</h1>
 
     <?php if (isset($error)) : ?>
