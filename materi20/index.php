@@ -1,11 +1,9 @@
 <?php
-
 session_start();
 
 if(!isset($_SESSION["login"])){
     header("Location: login.php");
-    exit;
-
+    exit; 
 }
 
 
@@ -21,7 +19,7 @@ $halamanAktif = (isset($_GET["halaman"])) ? $_GET["halaman"] : 1;
 $awalData = ($jumlahDataPerhalaman * $halamanAktif) - $jumlahDataPerhalaman;
 
 
-$mahasiswa = query ("SELECT * FROM mahasiswa $awalData, $jumlahDataPerhalaman");
+$mahasiswa = query ("SELECT * FROM mahasiswa LIMIT $awalData, $jumlahDataPerhalaman");
 
 //tombol cari ditekan
 if (isset ($_POST["cari"])) {
@@ -53,14 +51,14 @@ if (isset ($_POST["cari"])) {
 <!-- navigasi -->
 
 <?php if ($halamanAktif > 1) : ?>
-    <a href="?halaman=<?= $halamanAktif -1; ?>">&laquo;</a>
+    <a href="?halaman=<?= $halamanAktif - 1; ?>">&laquo;</a>
 <?php endif; ?>
 
 <?php for($i = 1; $i <= $jumlahHalaman; $i++) : ?>
     <?php if ($i  == $halamanAktif) : ?>
         <a href="?halaman<?= $i; ?>" style="font-weight: bold; color: red;"><?= $i; ?></a>
         <?php else : ?> 
-            <a href="halaman=<?= $i; ?>"><?= $i?></a>
+            <a href="?halaman=<?= $i; ?>"><?= $i; ?></a>
             <?php endif; ?>
         <?php endfor; ?>
 
