@@ -3,6 +3,9 @@ var keyword = document.getElementById('keyword');
 var tombolCari = document.getElementById('tombol-cari');
 var container = document.getElementById('container');
 
+//buat object ajax
+var xhr = new XMLHttpRequest();
+
 //tambahkan event ketika keyword ditulis
 keyword.addEventListener('keyup', function () {
   //buat kesiapan ajax

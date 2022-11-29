@@ -40,7 +40,7 @@ if (isset ($_POST["cari"])) {
 
 <br>
 
-<div class="container">
+<div id="container">
 
 <table border="1" cellpadding="10" cellspacing="0">
     <tr>
