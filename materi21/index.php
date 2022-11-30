@@ -25,6 +25,18 @@ if (isset ($_POST["cari"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
+
+    <style>
+        .loader{
+            width: 30px;
+            position: absolute;
+            top: 135px;
+            left: 328px;
+            z-index: -1;
+            /* display: none; */
+        }
+    </style>
+
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
 </head>
@@ -38,6 +50,8 @@ if (isset ($_POST["cari"])) {
 <input type="text" name="keyword" size="40" autofocus placeholder="masukan keyword pencarian!!!" autocomplete="off" id="keyword">
 <button type="submit" name="cari" id="tombol-cari">Cari!</button>
 
+
+<img src="img/loader.gif" class="loader">
 </form>
 
 <br>
