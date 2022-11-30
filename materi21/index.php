@@ -25,6 +25,8 @@ if (isset ($_POST["cari"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Admin</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <a href="logout.php">Logout!!!</a>
@@ -72,7 +74,6 @@ if (isset ($_POST["cari"])) {
 
 </div>
 
-<script src="js/jquery.js"></script>
-<script src="js/script.js"></script>
+
 </body>
 </html>
